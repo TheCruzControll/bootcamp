@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Register</h1>
+
+	<form action="">
+		<div>
+			<label for="firstname">First Name:</label>
+			<input id="firstname" name="firstname" type="text" placeholder="John" required>
+			<label for="lastname">Last Name:</label>
+			<input id="firstname" name="firstname" type="text" placeholder="John" required>
+		</div>
+
+		<div>
+			<label for="male">Male </label>
+			<input name="gender" id="male" type="radio" value="MALE">
+			<label for="female">Female </label>
+			<input name="gender" id="female" type="radio" value ="FEMALE">
+			<label for="other">Other </label>
+			<input name="gender" id="other" type="radio" value ="OTHER">
+		</div>
+
+		<div>
+			<label for="email">Email:</label>
+			<input id="email" type="email" name="email" placeholder="Email" required>
+
+
+			<label for="password">Password: </label>
+			<input id="passoword" type="password" name="passowrd" required minlength="5" >
+
+		</div>
+		
+		<div>
+			<label for="birthday">Birthday: </label>
+			
+			<select name="Month" id="birthday" placeholder="Month">
+				<option value="">Month</option>
+				<option value="">feb</option>
+				<option value="">march</option>
+			</select>
+
+			<select name="Day" id="birthday" placeholder="Day">
+				<option value="">Day</option>
+				<option value="">2</option>
+				<option value="">3</option>
+			</select>
+
+			<select name="Year" id="birthday" placeholder="Year">
+				<option value="">Year</option>
+				<option value="">2001</option>
+				<option value="">2002</option>
+				<option value="">2003</option>
+			</select>
+		</div>
+		
+		<div>
+			<label for="checkbox">I agree to the terms and service</label>
+			<input id="checkbox" type="checkbox" required>
+		</div>
+		
+		<input type="submit">
+	</form>
+</body>
+</html>
