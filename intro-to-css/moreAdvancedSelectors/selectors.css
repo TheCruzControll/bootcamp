@@ -1,0 +1,39 @@
+/* Element */
+li{
+
+}
+
+/* class */
+.hello{
+
+}
+
+/* id */
+#name{
+
+}
+
+/* star */
+* {
+    border: 1px solid lightblue;
+}
+
+/* Descendant Selector */
+li a{
+    color:greenyellow;
+}
+
+/* Adjacent Selector */
+h4 + ul{
+    border: 4px dashed red;
+}
+
+/* Attribute Selector */
+a[href="http://www.google.com"]{
+    background:lightcoral
+}
+
+/* nth of type */
+ul:nth-of-type(3){
+    background:lightgreen;
+}

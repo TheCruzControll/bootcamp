@@ -1,0 +1,15 @@
+li{
+    border: 2px solid red;
+}
+
+#special{
+    border: 5px dashed green;
+}
+
+.highlight{
+    background-color: aqua;
+}
+
+.completed{
+    text-decoration: line-through;
+}

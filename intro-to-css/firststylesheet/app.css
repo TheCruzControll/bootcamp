@@ -1,5 +1,10 @@
 h1{
     color:red;
+    /* border-color: purple;
+    border-width: 5px;
+    border-style: solid; */
+    /* border: width style color */
+    border: 5px dashed greenyellow
 }
 
 li{
@@ -7,5 +12,12 @@ li{
 }
 
 h4{
-    color:blanchedalmond;
+    background: rgb(255,100,25);
+}
+
+body{
+    /* background: url(https://i.pinimg.com/236x/c6/65/ec/c665eca683263cb0dd59eb8f6517644c.jpg);
+    background-repeat: no-repeat;
+    background-size: cover */
+    background:pink;
 }
