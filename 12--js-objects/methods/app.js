@@ -7,3 +7,5 @@ var obj = {
         return x+y;
     }
 }
+var comments = {};
+
