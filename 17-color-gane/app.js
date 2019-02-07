@@ -4,7 +4,24 @@ var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message")
+var h1 = document.querySelector("h1");
+var resetButton = document.querySelector("#reset")
+
 colorDisplay.textContent = pickedColor;
+
+resetButton.addEventListener("click", function(){
+    //generate new color
+    colors = generateRandomColors(6);
+    //pick new random colors
+    pickedColor = pickColor();
+    colorDisplay.textContent = pickedColor;
+    //change colors
+    for(var i=0;i<squares.length;i++){
+        squares[i].style.backgroundColor = colors[i];
+    }
+    h1.style.backgroundColor = "#232323";
+    resetButton.textContent = "New Color"
+})
 
 for(var i = 0; i <squares.length; i++){
     //add initial colors to squares
@@ -18,6 +35,8 @@ for(var i = 0; i <squares.length; i++){
         if(clickedColor === pickedColor){
             messageDisplay.textContent = "Correct"
             changeColors(clickedColor);
+            h1.style.backgroundColor = pickedColor;
+            resetButton.textContent = "Play Again?"
         }else{
             this.style.backgroundColor = "#232323"
             messageDisplay.textContent = "try again"
@@ -42,11 +61,15 @@ function generateRandomColors(num){
     randomColors = []
     
     for(var i = 0 ; i<num ; i++){
-        var randomRed = Math.floor(Math.random() * 255);
-        var randomBlue = Math.floor(Math.random() * 255);
-        var randomGreen = Math.floor(Math.random() * 255);
-        result = "rgb(" + randomRed+ ", "+randomBlue+", "+randomGreen+")"
-        randomColors.push(result)
+        randomColors.push(randomColor());
     }
     return randomColors
+}
+
+function randomColor(){
+    var randomRed = Math.floor(Math.random() * 256);
+    var randomBlue = Math.floor(Math.random() * 256);
+    var randomGreen = Math.floor(Math.random() * 256);
+    result = "rgb(" + randomRed+ ", "+randomBlue+", "+randomGreen+")"
+    return result
 }
