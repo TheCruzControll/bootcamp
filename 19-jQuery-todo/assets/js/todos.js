@@ -6,9 +6,12 @@ $("ul").on("click","li",function(){
 });
 
 $("button").on("click",function(){
-    var todoText = $("input[type='text']").val();
-    $("input[type='text']").val("");
-    $("ul").append("<li><span class='checkmark'><i class='far fa-check-circle'></i></span><input type='checkbox'/>"+todoText+"<span><i class='fas fa-times-circle trash'></i></span></li>");
+    console.log($("input[type='text']").val()!="");
+    if($("input[type='text']").val()!=""){
+        var todoText = $("input[type='text']").val();
+        $("input[type='text']").val("");
+        $("ul").prepend("<li><span class='checkmark'><i class='far fa-check-circle'></i></span><input type='checkbox'/>"+todoText+"<span><i class='fas fa-times-circle trash'></i></span></li>");
+    }
 })
 
 $("ul").on("click",".trash",function(event){
@@ -21,10 +24,10 @@ $("ul").on("click",".trash",function(event){
 
 
 $("input[type='text']").keypress(function(event){
-    if(event.which === 13){
+    if(($(this).val()!="") && (event.which === 13)){
         var todoText = $(this).val();
-        $(this).val("")
+        $(this).val("");
         //create a new li and add to ul
-        $("ul").append("<li><span class='checkmark'><i class='far fa-check-circle'></i></span><input type='checkbox'/>"+todoText+"<span><i class='fas fa-times-circle trash'></i></span></li>")
+        $("ul").prepend("<li><span class='checkmark'><i class='far fa-check-circle'></i></span><input type='checkbox'/>"+todoText+"<span><i class='fas fa-times-circle trash'></i></span></li>");
     }
-})
+});
