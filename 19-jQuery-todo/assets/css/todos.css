@@ -43,6 +43,32 @@ i{
     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+.buttonInside{
+    position:relative;
+    margin-bottom:10px;
+  }
+
+button{
+    position:absolute;
+    right: 0px;
+    top: 25px;
+    height:65px;
+    color:#4A4A4A;
+    background-color: #EEEFF1;
+    border: 2px solid #eceff1;
+    border-radius: 50%;
+    width:65px;
+    outline:none;
+    padding:2px;
+    transition: all 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+    font-size: 1.5rem;
+}
+
+button:hover{
+    border: 2px solid #3788ac;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: scale(1);
+}
 
 #container {
     background-color: #ffffff;
@@ -71,13 +97,15 @@ input[type="text"]{
     height:5rem;
     background-color: #EEEFF1;
     border: 2px solid #eceff1;
-    width: 100%;
+    width: 86%;
     font-size: 1.5rem;
     transition:  all 0.9s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 input[type="text"]:hover{
     border: 2px solid #3788ac;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    transform: scale(1);
 }
 input[type="text"]:focus{
     border: 2px solid #3788ac;
@@ -118,7 +146,7 @@ li:hover {
 }
 
 .checked{
-    color: #00c853;
+    color: #3788ac;
 }
 
 .completed {

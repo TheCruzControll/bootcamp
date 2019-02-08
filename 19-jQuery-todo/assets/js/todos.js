@@ -5,6 +5,11 @@ $("ul").on("click","li",function(){
     $(this).children().eq(2).children().toggleClass("confirm");
 });
 
+$("button").on("click",function(){
+    var todoText = $("input[type='text']").val();
+    $("input[type='text']").val("");
+    $("ul").append("<li><span class='checkmark'><i class='far fa-check-circle'></i></span><input type='checkbox'/>"+todoText+"<span><i class='fas fa-times-circle trash'></i></span></li>");
+})
 
 $("ul").on("click",".trash",function(event){
     $(this).parent().fadeOut(200,function(){
@@ -12,6 +17,8 @@ $("ul").on("click",".trash",function(event){
     });
     event.stopPropagation();
 });
+
+
 
 $("input[type='text']").keypress(function(event){
     if(event.which === 13){
